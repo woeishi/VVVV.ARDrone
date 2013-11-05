@@ -1,0 +1,49 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{6A0AFB1F-8219-4A08-85F7-B7F19B66AC16}</ProjectGuid>
+    <Configuration>Debug</Configuration>
+    <Platform>x86</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VVVV.Nodes</RootNamespace>
+    <AssemblyName>ARDrone</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <ReferencePath>..\vvvv_45beta28.1\lib\core\</ReferencePath>
+    <ReferencePath>..\vvvv-sdk\vvvv45\lib\core\</ReferencePath>
+    <ReferencePath>..\vvvv-sdk\vvvv45\lib\nodes\plugins\</ReferencePath>
+    <ReferencePath>..\vvvv_45beta28.1\bin\managed\</ReferencePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="SlimDX" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition.Codeplex" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="VVVV.Core" />
+    <Reference Include="VVVV.PluginInterfaces" />
+    <Reference Include="VVVV.Utils" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ARDroneNode.cs" />
+    <Compile Include="lib\ARDrone.cs" />
+    <Compile Include="lib\ARDroneHost.cs" />
+    <Compile Include="lib\Commander.cs" />
+    <Compile Include="lib\Configurator.cs" />
+    <Compile Include="lib\NavDataInterfacer.cs" />
+    <Compile Include="lib\NavDataStructs.cs" />
+    <Compile Include="lib\Pinger.cs" />
+    <Compile Include="lib\Positioner.cs" />
+    <Compile Include="lib\Target.cs" />
+    <Compile Include="lib\UdpServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+</Project>
